@@ -1,0 +1,12 @@
+# 本仓库的载荷面向 Linux，文本文件一律以 LF 提交与检出：
+# Windows 上 core.autocrlf=true 会把工作区换成 CRLF，导致 shell 脚本报
+# `syntax error near unexpected token $'do\r'`，SHA256SUMS 也会因行尾 \r 校验失败。
+*.sh         text eol=lf
+*.md         text eol=lf
+SHA256SUMS   text eol=lf
+.gitattributes text eol=lf
+
+# 二进制载荷不做换行转换
+*.deb    binary
+*.tgz    binary
+*.tar.xz binary
