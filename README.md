@@ -17,13 +17,6 @@
 
 平台：x86_64 Linux（glibc）。
 
-### Rust 为什么不用 `.deb`
-
-Debian 仓库里最新的 rustc 是 `1.97.1+dfsg1-1~exp1`（experimental，非稳定套件），
-trixie-backports 只到 `1.95.0`，都拿不到当前最新稳定版。因此 Rust 改用官方
-发布的组件包（`rustc` + `cargo` + `rust-std` + `clippy` + `rustfmt`，`x86_64-unknown-linux-gnu`），
-由 [`rust/install-rust.sh`](rust/install-rust.sh) 安装到用户目录。
-
 ## 安装（免 root）
 
 解压依赖：`xz-utils`（提供 `xz`，用于 `.tar.xz`）。Debian/Ubuntu 上
